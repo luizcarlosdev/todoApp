@@ -7,6 +7,9 @@ const textoTarefaSpan = document.querySelectorAll(".tarefa span");
 
 
 buttonAdicionar.addEventListener("click", () => {
+    if(novaTarefa.value == 'javascript' || novaTarefa.value == "Javascript") {
+        alert("Oi, Paulo!")
+    }
     if (novaTarefa.value.trim() !== "") {
         const div1 = document.createElement("div");
         div1.setAttribute("class", "tarefa");
@@ -34,9 +37,20 @@ buttonAdicionar.addEventListener("click", () => {
             buttonRemove.parentNode.parentNode.remove()
         });
         divButtons.appendChild(buttonRemove);
+        document.addEventListener("keypress", event => {
+            if (event.key === "r") {
+                buttonRemove.click()
+            }
+        })
         atividadesCampo.appendChild(div1);
         novaTarefa.value = "";
         novaTarefa.placeholder = 'Digite a próxima tarefa aqui';
+    }
+})
+
+document.addEventListener("keypress", event => {
+    if (event.key === "Enter") {
+        buttonAdicionar.click()
     }
 })
 
