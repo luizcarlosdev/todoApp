@@ -1,0 +1,158 @@
+@charset "UTF-8";
+
+:root{
+    --color0:#6D47C9;
+    --color1:#FFFFFF;
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    border: none;
+    list-style-type: none;
+    font-family: "Open Sans", sans-serif;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+main{
+    width: 550px;
+    height: auto;
+    /* border: 0.5px solid black; */
+    display: grid;
+    grid-template-columns: 1fr;
+    place-items: center;
+    row-gap: 20px;
+}
+
+main div.inserir-atividade{
+    width: 100%;
+    height: 150px;
+    box-shadow: 0px 0px 10px 2px #00000033;
+    display: flex;
+    border-radius: 5px;
+    align-items: center;
+    flex-direction: row;
+    column-gap: 16px;
+    padding: 20px 30px;
+}
+
+main div.inserir-atividade input#inserir-tarefa{
+    width: 70%;
+    display: inline-block;
+    box-shadow: 0px 0px 10px 1px #0000004f;
+    height: 50px;
+    padding: 5px 20px;
+    border-radius: 5px;
+    background-color: rgba(49, 108, 148, 0.099);
+}
+
+main div.inserir-atividade input#inserir-tarefa{
+    font-size: 1rem;
+}
+
+main div.inserir-atividade input[type=button]{
+    width: 30%;
+    height: 45px;
+    padding: 3px 20px;
+    background-color: var(--color0);
+    color: #ffffff;
+    border-radius: 5px;
+    font-size: 1.1rem;
+}
+
+main div.atividades{
+    width: 100%;
+}
+
+main div.atividades div.tarefa{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 12px;
+    padding: 12px;
+    height: 60px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px 1px #00000030;
+    margin: 15px 0px;
+    overflow: hidden;
+}
+
+main div.atividades div.tarefa span{
+    width: auto;
+    height: auto;
+    text-align: left;
+}
+
+main div.atividades div.tarefa div.buttons{
+    display: flex;
+    height: 100%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    column-gap: 10px;
+}
+
+main div.atividades .concluido{
+    background-color: #00A36C;
+    box-shadow: 0px 0px 10px 2px #00A36C;
+    color: #ffffff;
+}
+
+main div.atividades div.tarefa div.buttons button{
+    background-color: transparent;
+    height: 100%;
+    width: 30px;
+}
+
+main div.atividades div.tarefa div.buttons button.feito{
+    background-color: green;
+    height: 30px;
+    border-radius: 50%;
+}
+
+main div.atividades div.tarefa div.buttons button.feito i{
+    color: #ffffff;
+}
+
+main div.atividades div.tarefa div.buttons button.remover{
+    font-size: 1.3rem;
+    font-weight: 800;
+    color: #f00;
+}
+
+main div.atividades div.tarefa div.buttons i{
+    font-size: 1.2rem;
+}
+
+@media (max-width:768px){
+    body{
+        overflow-x: hidden;
+    }
+    main{
+        width: 320px;
+    }
+    main div.inserir-atividade{
+        display: grid;
+        grid-template-columns: 1fr;
+        row-gap: 10px;
+        place-items: center;
+    }
+
+    main div.inserir-atividade input#inserir-tarefa{
+        width: 100%;
+    }
+
+    main div.inserir-atividade input[type=button]{
+        width: 100%;
+    }
+}
