@@ -37,11 +37,11 @@ buttonAdicionar.addEventListener("click", () => {
             buttonRemove.parentNode.parentNode.remove()
         });
         divButtons.appendChild(buttonRemove);
-        document.addEventListener("keypress", event => {
-            if (event.key === "r") {
-                buttonRemove.click()
-            }
-        })
+        // document.addEventListener("keypress", event => {
+        //     if (event.key === "r") {
+        //         buttonRemove.click()
+        //     }
+        // })
         atividadesCampo.appendChild(div1);
         novaTarefa.value = "";
         novaTarefa.placeholder = 'Digite a próxima tarefa aqui';
